@@ -263,12 +263,10 @@ class Ui_ques1(QtWidgets.QWidget):
              ("Что выведет данный код?\n  print('2'=='2.0')", '-True', '+False', '-ничего', '-ошибку'),
              ("Что выведет данный код?\n  print('5'*2)", '-10', '+55', '-5*2', '-ошибку'),
              ("Что выведет данный код?\n  print('5'*2)", '-10', '+55', '-5*2', '-ошибку'),
-             ("Что выведет данный код?\n  a='egg'\n  a[1]='e'\n  print(a)", '-egg', '-eeg', '-ege', '+ошибку'),
-             ("Что выведет данный код?\n  a='eggs'\n   print(a[3:5:-1])", '-eg', '-s', '+ничего', '-ошибку'),
-             ("Что выведет данный код?\n  a={1,2}\n   print(type(a))", "+<class'set'>", "-<class'dict'>", "-<class'list'>", "-ошибку"),
-             ("Что выведет данный код?\n  a=set([1,5,2,4,1])\n  b=set([1,4])\n  print(a.difference_update(b))", "-{1,4}", "-{5,2}>","+None", "-ошибку"),
+             ("Что выведет данный код?\n  a='eggs'\n  print(a[3:5:-1])", '-eg', '-s', '+ничего', '-ошибку'),
+             ("Что выведет данный код?\n  a={1,2}\n  print(type(a))", "+<class'set'>", "-<class'dict'>", "-<class'list'>", "-ошибку"),
              ('Какой из  вариантов используется для объявления\nфункции в Python?', '-function someF()', '-def someF()', '+def someF():', '-function someF():'),
-             ('Какой из  вариантов является допустимым для цикла в Python?', '-for(a = 0; a < 3; a++)', '-for a in range 3','-for a loop 3:', '+for a in range(1,3):'),
+             ('Какой из  вариантов является допустимым для\nцикла в Python?', '-for(a = 0; a < 3; a++)', '-for a in range 3','-for a loop 3:', '+for a in range(1,3):'),
              ]
         cursor.executemany('''INSERT INTO table_Tes(Qwestion,answer_1,answer_2,answer_3,answer_4) VALUES (?,?,?,?,?)''',l)
         # conn.commit()
