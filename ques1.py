@@ -153,6 +153,15 @@ class Ui_ques1(QtWidgets.QWidget):
         self.unswer()
         self.B1.clicked.connect(self.main_1)
 
+
+
+    def main2(self):
+        self.S1 = self.T1.text()
+        self.queswin = QtWidgets.QMainWindow()
+        self.ui = Ui_resultwin(self.S1)
+        self.ui.setupUi(self.queswin)
+        self.queswin.show()
+
     def unswer(self):
         if self.ar1[1][0] == '+':
             self.R1.clicked.connect(self.res_yes)
